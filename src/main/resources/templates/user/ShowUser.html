@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"  href="../static/mystyle.css" th:href="@{/mystyle.css}">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<tr>
+	<th>Name</th>
+	<th>email</th>
+	<th>dob</th>
+</tr>
+
+<tr th:each="user : ${users}">
+<td th:text=" ${user.name}">ash</td>
+<td th:text="${user.email}">a@a.com</td>
+<td th:text="${#dates.format(user.dob, 'dd-MMM-yyyy')}">12-12-1994</td>
+</tr>
+<!-- <td th:text=" ${copyright}">info</span>
+</td>
+ -->
+ </tablr>
+ </body>
+</html>
